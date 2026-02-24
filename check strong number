@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+long long fact(int n) {
+    long long f = 1;
+    while(n > 1)
+        f *= n--;
+    return f;
+}
+
+int main() {
+    int num, temp, sum = 0;
+    cin >> num;
+    temp = num;
+
+    while(temp > 0) {
+        sum += fact(temp % 10);
+        temp /= 10;
+    }
+
+    if(sum == num)
+        cout << "Strong";
+    else
+        cout << "Not Strong";
+
+    return 0;
+}
