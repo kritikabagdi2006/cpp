@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, power = 1;
+    cin >> a >> b;
+    while(b > 0) {
+        power *= a;
+        b--;
+    }
+    cout << power;
+    return 0;
+}
