@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float n, guess;
+    cin >> n;
+    guess = n / 2;
+
+    for(int i = 0; i < 10; i++)
+        guess = (guess + n / guess) / 2;
+
+    cout << guess;
+    return 0;
+}
